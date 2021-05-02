@@ -17,8 +17,7 @@ const extract = name => {
 }
 
 const createIndexDoc = cfg => {
-    let tree = `
----
+    let tree = `---
 order: 1
 toc: menu
 hero:
