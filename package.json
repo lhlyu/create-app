@@ -1,7 +1,6 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "0.0.1-rc.1",
-  "private": false,
+  "version": "0.0.1-rc.2",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
