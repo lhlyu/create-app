@@ -1,15 +1,17 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "0.0.1-rc.3",
+  "version": "0.0.1-rc.4",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lhlyu/create-app.git"
   },
-  "homepage": "",
+  "homepage": "https://create-app-lhlyu.vercel.app/",
   "bin": {
-    "create-app": "index.js"
+    "create-lhlyu-app": "index.js",
+    "create-app": "index.js",
+    "lca": "index.js"
   },
   "main": "index.js",
   "files": [
