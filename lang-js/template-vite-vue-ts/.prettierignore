@@ -6,5 +6,5 @@
 *.ini
 .idea
 node_modules
-dist
 test
+dist
