@@ -100,10 +100,7 @@ const run = async () => {
     }
 
     const templatePath = path.join(__dirname,`${langPrefix}${langPrompt}`,`${templatePrefix}${templatePrompt}`)
-    const targetPath = path.join(__dirname,namePrompt)
-
-    console.log('templatePath:',templatePath)
-    console.log('targetPath:',targetPath)
+    const targetPath = path.join('.',namePrompt)
 
     walk(templatePath, targetPath, project)
 }
