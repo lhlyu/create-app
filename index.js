@@ -22,11 +22,17 @@ const cfg = {
 const langPrefix = 'lang-'
 const templatePrefix = 'template-'
 
-const blackList = ['node_modules','.git','.idea','u.test']
+const blackList = ['node_modules','.git','.idea','yarn.lock','dist']
+const blackSuffixList = ['.ico','.jpg', '.png','.css','.ts','.js','.sh']
 
 const filterBlackList = name => {
     return blackList.indexOf(name) > -1
 }
+
+const filterBlackSuffixList = name => {
+    return blackSuffixList.indexOf(name) > -1
+}
+
 
 // 运行
 const run = async () => {
@@ -123,8 +129,9 @@ const walk = (srcPath, targetPath, project) => {
         }else{
             fsExtra.readFile(src, 'utf8', (err, data) => {
                 if (err) throw err
-                // 渲染
-                data = ejs.render(data, project)
+                if (!filterBlackSuffixList(path.extname(src))) {
+                    data = ejs.render(data, project)
+                }
                 fsExtra.outputFile(target, data)
             })
         }
