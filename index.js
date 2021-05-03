@@ -11,6 +11,7 @@ const validate = require("validate-npm-package-name")
 const gitUserName = require('git-user-name')
 const ejs = require('ejs')
 const config = require('./config.json')
+const pkg = require('./package.json')
 
 const cfg = {
     author : gitUserName(),
@@ -29,6 +30,8 @@ const filterBlackList = name => {
 
 // 运行
 const run = async () => {
+
+    console.log(`当前版本：v${pkg.version}`)
     // 获取项目名
     const namePrompt = await new Input({
         name: 'name',
@@ -98,6 +101,9 @@ const run = async () => {
 
     const templatePath = path.join(__dirname,`${langPrefix}${langPrompt}`,`${templatePrefix}${templatePrompt}`)
     const targetPath = path.join(__dirname,namePrompt)
+
+    console.log('templatePath:',templatePath)
+    console.log('targetPath:',targetPath)
 
     walk(templatePath, targetPath, project)
 }
