@@ -1,4 +1,6 @@
-const { 
+#!/usr/bin/env node
+
+const {
     Input,
     Select
 } = require('enquirer');

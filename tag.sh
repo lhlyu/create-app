@@ -1,2 +1,4 @@
-git tag v0.0.1-rc.6
-git push origin v0.0.1-rc.6
+VERSION=$(node -e "(function () { console.log(require('./package.json').version) })()")
+echo v$VERSION
+git tag v$VERSION
+git push origin v$VERSION
