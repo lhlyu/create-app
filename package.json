@@ -1,6 +1,6 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "0.0.1-rc.4",
+  "version": "0.0.1-rc.5",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
@@ -9,9 +9,7 @@
   },
   "homepage": "https://create-app-lhlyu.vercel.app/",
   "bin": {
-    "create-lhlyu-app": "index.js",
-    "create-app": "index.js",
-    "lca": "index.js"
+    "create-lhlyu-app": "index.js"
   },
   "main": "index.js",
   "files": [
@@ -26,7 +24,7 @@
     "dev": "dumi dev",
     "build": "yarn gen && dumi build"
   },
-  "devDependencies": {
+  "dependencies": {
     "antd": "^4.15.3",
     "babel-plugin-import": "^1.13.3",
     "dumi": "^1.0.12",
