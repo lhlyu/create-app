@@ -11,18 +11,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "vue": "^3"
+    "vue": "^3.0.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1",
-    "@vue/compiler-sfc": "^3",
-    "autoprefixer": "^10",
-    "postcss": "^8",
-    "postcss-loader": "^5",
-    "prettier": "^2",
-    "sass": "^1",
-    "typescript": "^4",
-    "vite": "^2",
-    "vue-tsc": "^0"
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.11",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.15",
+    "postcss-loader": "^5.3.0",
+    "prettier": "^2.3.0",
+    "sass": "^1.32.13",
+    "typescript": "^4.2.4",
+    "vite": "^2.3.3",
+    "vue-tsc": "^0.1.4"
   }
 }
