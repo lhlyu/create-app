@@ -1,5 +1,14 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import './styles/index.scss'
+import store from "./stores"
+import router from "./routes"
+import "./styles/index.scss"
 
-createApp(App).mount('#app')
+import App from "./App.vue"
+
+const app = createApp(App)
+
+
+app.use(store)
+app.use(router)
+
+app.mount("#app")
