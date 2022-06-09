@@ -21,6 +21,9 @@ toc: menu
             src
             <small>源码</small>
             <ul>
+                <li>api</li>
+                <li>routes</li>
+                <li>stores</li>
                 <li>
                     styles
                     <small>样式</small>
@@ -29,21 +32,22 @@ toc: menu
                     </ul>
                 </li>
                 <li>App.vue</li>
-                <li>config.ts</li>
                 <li>main.ts</li>
+                <li>shims-axios.d.ts</li>
                 <li>shims-vue.d.ts</li>
             </ul>
         </li>
         <li>.gitignore</li>
         <li>.prettierignore</li>
         <li>.prettierrc.json</li>
+        <li>default.conf</li>
+        <li>Dockerfile</li>
         <li>index.html</li>
         <li>LICENSE</li>
         <li>package.json</li>
         <li>postcss.config.js</li>
         <li>README.md</li>
         <li>tsconfig.json</li>
-        <li>upgrade.sh</li>
         <li>vite.config.ts</li>
     </ul>
 </Tree>

@@ -9,3 +9,7 @@
 > yarn global add @lhlyu/create-app
 
 > 执行 create-lhlyu-app 或 create-app 或 lca
+
+- 或
+
+> pnpm create @lhlyu/app

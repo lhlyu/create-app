@@ -19,6 +19,10 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />Powered by [lhlyu](htt
 
 > 执行 create-lhlyu-app 或 create-app 或 lca
 
+- 或
+
+> pnpm create @lhlyu/app
+
 ## 模板列表
 
 <Tree title="按语言划分">
