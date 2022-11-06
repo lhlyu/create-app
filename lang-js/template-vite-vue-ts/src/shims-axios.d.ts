@@ -1,4 +1,4 @@
-import { AxiosRequestConfig } from "axios"
+import { AxiosRequestConfig } from 'axios'
 
 export namespace ReqRes {
     export interface ResponseResult<T = any> {
@@ -8,7 +8,7 @@ export namespace ReqRes {
     }
 }
 
-declare module "axios" {
+declare module 'axios' {
     export interface AxiosInstance {
         request<T = any, R = ReqRes.ResponseResult<T>>(config: AxiosRequestConfig): Promise<R>
         get<T = any, R = ReqRes.ResponseResult<T>>(url: string, config?: AxiosRequestConfig): Promise<R>
