@@ -21,9 +21,9 @@
     "scripts"
   ],
   "scripts": {
-    "demo": "yarn gen && node ./index.js",
+    "demo": "node ./index.js",
     "dev": "dumi dev",
-    "build": "yarn gen && dumi build"
+    "build": "dumi build"
   },
   "devDependencies": {
     "antd": "^4.24.1",

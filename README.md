@@ -13,3 +13,17 @@
 - 或
 
 > pnpm create @lhlyu/app
+
+
+## 模板
+
+### vite-vue3-ts
+
+> vite + vue3 + pinia + vue-router + axios + typescript + scss + 
+
+### vue3-admin
+
+> vite + vue3 + pinia + vue-router + axios + typescript + scss
+
+> 一个通用的admin管理项目模板，仅实现了简单的登录和菜单
+
