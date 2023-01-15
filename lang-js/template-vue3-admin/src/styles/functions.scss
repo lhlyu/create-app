@@ -1,0 +1,3 @@
+@function h($color) {
+    @return red($color), green($color), blue($color);
+}

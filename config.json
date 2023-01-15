@@ -1,5 +1,6 @@
 {
 	"js": [
-		"vite-vue-ts"
+		"vite-vue-ts",
+		"vue3-admin"
 	]
 }

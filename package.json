@@ -1,6 +1,6 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
@@ -29,7 +29,9 @@
   "devDependencies": {
     "antd": "^4.24.1",
     "babel-plugin-import": "^1.13.5",
-    "dumi": "^1.1.49"
+    "dumi": "^1.1.49",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "ejs": "^3.1.8",
@@ -40,5 +42,9 @@
     "klaw": "^3.0.0",
     "klaw-sync": "^6.0.0",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

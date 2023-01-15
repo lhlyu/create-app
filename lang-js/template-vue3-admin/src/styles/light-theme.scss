@@ -1,0 +1,16 @@
+@import 'functions';
+
+:root[theme='light'] {
+    --admin-bg: #{h(#f2f3f5)};
+    --admin-menu-selected-bg: #{h(#e6e6e6)};
+    --admin-aside-bg: #{h(#ffffff)};
+    --admin-collapse-color: #{h(#262626)};
+    --admin-tab-bg: #{h(#ffffff)};
+    --admin-theme-color: #{h(#ff79c6)};
+    --admin-selection-bg: #{h(#ffb86c)};
+    --admin-selection-color: #{h(#ffffff)};
+    --admin-font-color: #{h(#262626)};
+    --admin-font-size: 14px;
+    --admin-font-family: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC',
+        'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+}
