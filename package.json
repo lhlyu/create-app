@@ -21,7 +21,6 @@
     "scripts"
   ],
   "scripts": {
-    "gen": "node ./scripts/generate.js",
     "demo": "yarn gen && node ./index.js",
     "dev": "dumi dev",
     "build": "yarn gen && dumi build"

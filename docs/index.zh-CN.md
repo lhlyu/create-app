@@ -26,7 +26,8 @@ footer: Open-source MIT Licensed | Copyright © 2021<br />Powered by [lhlyu](htt
         <li>
             js
             <ul>
-                <li>vite-vue-ts</li>                <li>vue3-admin</li>
+                <li>vite-vue-ts<small>vue3项目通用模板</small></li>                
+                <li>vue3-admin<small>一个vue3-admin通用模板，适合跟任何vue3 UI框架搭配</small></li>
             </ul>
         </li>
     </ul>

@@ -54,7 +54,7 @@ export default (props: ComponentProps<'div'>) => {
       showLine={{ showLeafIcon: false }}
       selectable={false}
       treeData={[{ key: '0', title: props.title || '<root>', children: data }]}
-      defaultExpandAll
+      defaultExpandParent
     />
   );
 };
