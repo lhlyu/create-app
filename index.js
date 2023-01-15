@@ -23,14 +23,14 @@ const langPrefix = 'lang-'
 const templatePrefix = 'template-'
 
 const blackList = ['node_modules','.git','.idea','yarn.lock','dist']
-const blackSuffixList = ['.ico','.jpg', '.png','.css','.ts','.js','.sh']
+const whiteSuffixList = ['.ico','.jpg', '.png','.css','.ts','.js','.sh', '.vue']
 
 const filterBlackList = name => {
     return blackList.indexOf(name) > -1
 }
 
-const filterBlackSuffixList = name => {
-    return blackSuffixList.indexOf(name) > -1
+const isWhiteSuffixList = name => {
+    return whiteSuffixList.indexOf(name) > -1
 }
 
 
@@ -119,6 +119,7 @@ const walk = (srcPath, targetPath, project) => {
         let target = path.join(targetPath, item)
 
         const basename = path.basename(src)
+        const suffix = path.extname(src)
 
         if (filterBlackList(basename)) {
             return
@@ -127,11 +128,13 @@ const walk = (srcPath, targetPath, project) => {
         if(stats.isDirectory()){
             walk(src, target, project)
         }else{
+            if (isWhiteSuffixList(suffix)) {
+                fsExtra.copySync(src, target)
+                return
+            }
             fsExtra.readFile(src, 'utf8', (err, data) => {
                 if (err) throw err
-                if (!filterBlackSuffixList(path.extname(src))) {
-                    data = ejs.render(data, project)
-                }
+                data = ejs.render(data, project)
                 fsExtra.outputFile(target, data)
             })
         }
