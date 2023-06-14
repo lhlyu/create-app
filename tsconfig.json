@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "lib": ["ES2020"],
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+
+
+    "declaration": false,
+    "sourceMap": false,
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "allowJs": true
+  },
+  "include":[
+    "src/**/*.ts"
+  ]
+}
