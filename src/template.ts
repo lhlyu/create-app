@@ -10,11 +10,11 @@ const rs = ['index.html', 'package.json', 'README.md', 'LICENSE']
 
 const genViteVue3Ts = async (project: ProjectOption) => {
     const templatePath = path.join(__dirname, '../packages/vite-vue3-ts/**/*')
-    console.log(templatePath)
     const filenames = fg.sync(templatePath, {
         dot: true,
         ignore: ['**/node_modules/**']
     })
+    console.log(templatePath, filenames.length)
     filenames.map(src => {
         const dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
         const has = rs.includes(path.basename(src))
