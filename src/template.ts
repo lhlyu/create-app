@@ -1,9 +1,10 @@
 import path from 'node:path'
+import { fileURLToPath } from 'url'
 import fg from 'fast-glob'
 import { handlerFile } from './util'
 
-
-const __dirname = path.resolve()
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const rs = ['index.html', 'package.json', 'README.md', 'LICENSE']
 
