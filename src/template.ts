@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { fileURLToPath } from 'url'
 import fg from 'fast-glob'
-import { handlerFile, existsFilename } from './util'
+import { handlerFile } from './util'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -14,11 +14,9 @@ const genViteVue3Ts = async (project: ProjectOption) => {
         dot: true,
         ignore: ['vite-vue3-ts/node_modules/**']
     })
-    console.log(templatePath)
     filenames.map(src => {
         const dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
         const has = rs.includes(path.basename(src))
-        console.log(dest)
         handlerFile(src, dest, (content: string): string => {
             if (has) {
                 content = content.replace('PROJECT_NAME', project.name)
