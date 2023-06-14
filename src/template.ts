@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { fileURLToPath } from 'url'
 import fg from 'fast-glob'
-import { handlerFile } from './util'
+import { handlerFile, existsFilename } from './util'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -9,12 +9,14 @@ const __dirname = path.dirname(__filename)
 const rs = ['index.html', 'package.json', 'README.md', 'LICENSE']
 
 const genViteVue3Ts = async (project: ProjectOption) => {
+
     const templatePath = path.join(__dirname, '../packages/vite-vue3-ts/**/*')
     const filenames = fg.sync(templatePath, {
         dot: true,
         ignore: ['**/node_modules/**']
     })
     console.log(templatePath, filenames.length)
+    console.log('文件是否存在:', existsFilename(path.join(__dirname, '../packages/vite-vue3-ts/Dockerfile')))
     filenames.map(src => {
         const dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
         const has = rs.includes(path.basename(src))
