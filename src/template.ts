@@ -9,14 +9,12 @@ const __dirname = path.dirname(__filename)
 const rs = ['index.html', 'package.json', 'README.md', 'LICENSE']
 
 const genViteVue3Ts = async (project: ProjectOption) => {
-
     const templatePath = path.join(__dirname, '../packages/vite-vue3-ts/**/*')
     const filenames = fg.sync(templatePath, {
         dot: true,
-        ignore: ['**/node_modules/**']
+        ignore: ['vite-vue3-ts/node_modules/**']
     })
-    console.log(templatePath, filenames.length)
-    console.log('文件是否存在:', existsFilename(path.join(__dirname, '../packages/vite-vue3-ts/Dockerfile')))
+    console.log(templatePath)
     filenames.map(src => {
         const dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
         const has = rs.includes(path.basename(src))
