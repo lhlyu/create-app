@@ -62,6 +62,10 @@ const main = async () => {
     //     ],
     // }));
 
+    console.log()
+    console.log('-----------------------------')
+    console.log()
+
     // 生成项目
     await genViteVue3Ts(project)
 
@@ -69,6 +73,7 @@ const main = async () => {
 }
 
 main().then(project => {
+    console.log()
     console.log('-----------------------------')
     console.log()
     console.log('创建成功~')
