@@ -15,7 +15,11 @@ const genViteVue3Ts = async (project: ProjectOption) => {
         ignore: ['**/vite-vue3-ts/node_modules/**']
     })
     filenames.map(src => {
-        const dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
+        let dest = src.replace(path.join(__dirname, '../packages/vite-vue3-ts'), `./${project.name}`)
+        // 特殊处理
+        if (dest.indexOf('gitignore') > 0) {
+            dest = dest.replace('gitignore', '.gitignore')
+        }
         console.log(dest)
         const has = rs.includes(path.basename(src))
         handlerFile(src, dest, (content: string): string => {
