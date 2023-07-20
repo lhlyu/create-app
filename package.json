@@ -1,6 +1,6 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
@@ -46,7 +46,7 @@
     "prettier": "^3.0.0",
     "prettier-plugin-rational-order": "^1.0.3",
     "rimraf": "^5.0.1",
-    "rollup": "^3.26.2",
+    "rollup": "^3.26.3",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   }
