@@ -1,7 +1,7 @@
-import { input } from '@inquirer/prompts'
+import { input, select } from '@inquirer/prompts'
 import pkg from '../package.json'
 import { getUsername, existsFilename } from './util'
-import genViteVue3Ts from './template'
+import genProject, { templates } from './template'
 
 const main = async () => {
     console.log(`当前版本号：${pkg.version}`)
@@ -10,7 +10,9 @@ const main = async () => {
         name: 'app-demo',
         desc: '',
         author: getUsername(),
-        version: '0.0.1'
+        version: '0.0.1',
+        template: 'vite-vue3-ts',
+        component: ''
     }
     project.name = await input({
         message: '项目名字',
@@ -41,33 +43,25 @@ const main = async () => {
         default: project.version
     })
 
-    // const features = new Set(await checkbox({
-    //     message: '选择需要支持的功能',
-    //     pageSize: 20,
-    //     choices: [
-    //         { name: 'vue-router (路由)', value: 'router', checked: true },
-    //         { name: 'i18n (国际化)', value: 'i18n', checked: true },
-    //         { name: 'pinia (状态管理库)', value: 'pinia', checked: true },
-    //         { name: 'pinia-plugin-persistedstate (pinia持久化插件)', value: 'persist', checked: true },
-    //         { name: 'zipson (序列化压缩)', value: 'zipson', checked: true },
-    //         { name: 'jsx (vue jsx)', value: 'jsx', checked: true },
-    //         { name: 'auto-import (自动导入)', value: 'auto', checked: true },
-    //         { name: 'sass', value: 'sass', checked: true },
-    //         { name: 'prettier (项目代码格式化)', value: 'prettier', checked: true },
-    //         { name: 'prettier-plugin-rational-order (CSS属性排序)', value: 'order', checked: true },
-    //         { name: 'autoprefixer', value: 'autoprefixer', checked: true },
-    //         { name: 'cssnano (CSS优化)', value: 'cssnano', checked: true },
-    //         { name: 'vercel', value: 'vercel', checked: true },
-    //         { name: 'Dockerfile', value: 'docker', checked: true },
-    //     ],
-    // }));
+    // 获取模板
+    project.template = await select({
+        message: '选择一个项目模板',
+        choices: templates
+    })
+
+    if (project.template === 'vite-vue3-component') {
+        project.component = await input({
+            message: '组件名字',
+            default: project.name
+        })
+    }
 
     console.log()
     console.log('-----------------------------')
     console.log()
 
     // 生成项目
-    await genViteVue3Ts(project)
+    await genProject(project)
 
     return project
 }

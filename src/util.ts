@@ -50,3 +50,11 @@ export const handlerFile = async (src: string, dest: string, handler: (content: 
     content = handler(content)
     return createFile(dest, content)
 }
+
+// 帕斯卡命名法
+export const toPascalCase = (name: string): string => {
+    return name
+        .split('-')
+        .map(item => item[0] && item[0].toUpperCase() + item.substring(1))
+        .join('')
+}

@@ -3,4 +3,6 @@ declare interface ProjectOption {
     desc: string
     author: string
     version: string
+    template: string
+    component: string
 }
