@@ -15,22 +15,22 @@
     "pinia": "^2.1.6",
     "pinia-plugin-persistedstate": "^3.2.0",
     "vue": "^3.3.4",
-    "vue-i18n": "^9.2.2",
+    "vue-i18n": "^9.3.0",
     "vue-router": "^4.2.4",
     "zipson": "^0.2.12"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "autoprefixer": "^10.4.14",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.1",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
     "prettier-plugin-rational-order": "^1.0.3",
-    "sass": "^1.64.2",
-    "typescript": "^5.1.6",
+    "sass": "^1.66.1",
+    "typescript": "^5.2.2",
     "unplugin-auto-import": "^0.16.6",
     "vite": "^4.4.9",
-    "vue-tsc": "^1.8.8"
+    "vue-tsc": "^1.8.10"
   }
 }
