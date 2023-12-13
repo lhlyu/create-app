@@ -1,6 +1,6 @@
 {
   "name": "@lhlyu/create-app",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "lhlyu",
   "license": "MIT",
   "repository": {
@@ -32,22 +32,22 @@
     "@inquirer/prompts": "^3.3.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-env": "^7.23.6",
     "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-strip": "^3.0.4",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@types/node": "^20.9.1",
+    "@types/node": "^20.10.4",
     "fast-glob": "^3.3.2",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "prettier-plugin-rational-order": "^1.0.3",
     "rimraf": "^5.0.5",
-    "rollup": "^4.4.1",
+    "rollup": "^4.8.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }
